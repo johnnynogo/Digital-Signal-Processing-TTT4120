@@ -1,0 +1,37 @@
+A4P3
+
+# MY CODE
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.signal import freqz
+
+alpha = 0.9
+b = [alpha, -1]   # numerator
+a = [1, -alpha]   # denominator
+
+w, h = freqz(b, a, worN=1024)   # h = frequency response at 1024 points
+
+plt.plot(w, 20*np.log10(abs(h)))
+plt.xlabel("Frequency [rad/sample]")
+plt.ylabel("Magnitude [dB]")
+plt.title("Frequency response of A(z)")
+plt.grid(True)
+plt.show()
+
+# CHAT CODE
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.signal import freqz
+
+alpha = 0.9
+b = [alpha, -1]   # numerator
+a = [1, -alpha]   # denominator
+
+w, h = freqz(b, a, worN=1024)   # h = frequency response at 1024 points
+
+plt.plot(w, 20*np.log10(abs(h)))
+plt.xlabel("Frequency [rad/sample]")
+plt.ylabel("Magnitude [dB]")
+plt.title("Frequency response of A(z)")
+plt.grid(True)
+plt.show()
